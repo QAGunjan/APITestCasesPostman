@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "38ada650-c1f3-48fc-99ab-0aa8e34b643d",
+		"_postman_id": "7d581817-6baf-4bbf-8779-4264ec6b2058",
 		"name": "RestFulBooker",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "23057138"
@@ -229,7 +229,8 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"uuid": "50641df4-0ac9-42e8-a1fd-74804bfbc739"
 							}
 						],
 						"body": {
@@ -308,12 +309,14 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"uuid": "15fe6efb-a313-4073-b7f4-42c2f2f0f95e"
 							},
 							{
 								"key": "Cookie",
 								"value": "token={{token}}",
-								"type": "text"
+								"type": "text",
+								"uuid": "d742a062-4a38-4e33-8124-d6ef3b8b0518"
 							}
 						],
 						"body": {
@@ -369,12 +372,14 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"uuid": "abbba78d-204e-4f5e-9f51-1d90a64ce01b"
 							},
 							{
 								"key": "Cookie",
 								"value": "token={{token}}",
-								"type": "text"
+								"type": "text",
+								"uuid": "db327023-2c3b-4434-ba6c-a55314626fb4"
 							}
 						],
 						"url": {
@@ -1035,7 +1040,8 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"uuid": "ac71a7bb-5c06-4e61-ab6b-307176702b14"
 							}
 						],
 						"body": {
@@ -1101,12 +1107,14 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"uuid": "5dddb484-c8b1-49c9-80e1-ea843018ce6c"
 							},
 							{
 								"key": "Cookie",
 								"value": "token={{token}}",
-								"type": "text"
+								"type": "text",
+								"uuid": "1eb6ba02-0730-4fbc-abb4-496884147ac3"
 							}
 						],
 						"body": {
@@ -1173,12 +1181,14 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"uuid": "853e5ee1-bec8-478a-91e5-eb8e81a8aedf"
 							},
 							{
 								"key": "Cookie",
 								"value": "token={{token}}",
-								"type": "text"
+								"type": "text",
+								"uuid": "c939f7a9-18cb-403c-b81c-cca35578dbdc"
 							}
 						],
 						"body": {
@@ -1245,12 +1255,14 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"uuid": "e762ee5b-f481-4e22-9333-b804d82abf65"
 							},
 							{
 								"key": "Cookie",
 								"value": "token={{token}}",
-								"type": "text"
+								"type": "text",
+								"uuid": "86397299-23b7-4f7c-b01f-094d51503d91"
 							}
 						],
 						"body": {
@@ -1318,12 +1330,14 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"uuid": "8006bf53-2517-4df8-aa22-52456544790d"
 							},
 							{
 								"key": "Cookie",
 								"value": "token={{token}}",
-								"type": "text"
+								"type": "text",
+								"uuid": "1cc96116-56b3-4d00-a6de-f33bf3595a1a"
 							}
 						],
 						"url": {
@@ -1381,12 +1395,14 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"uuid": "4f606d90-0251-4dbf-9c29-e9d2bcbd9d2b"
 							},
 							{
 								"key": "Cookie",
 								"value": "token={{token}}",
-								"type": "text"
+								"type": "text",
+								"uuid": "7034dcc8-f082-483a-99bf-ffa15ca62e4a"
 							}
 						],
 						"url": {
@@ -1444,12 +1460,14 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"uuid": "88ba3f52-f3d3-4481-a9cf-6ba22337edf0"
 							},
 							{
 								"key": "Cookie",
 								"value": "token={{token}}",
-								"type": "text"
+								"type": "text",
+								"uuid": "b65ae2ee-d3ee-4604-866c-119a4c5ae80f"
 							}
 						],
 						"url": {
@@ -1465,6 +1483,339 @@
 								"!@"
 							],
 							"hash": "$"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBookingWithInvalidtoken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Validate Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Content-Type value is text/plain; charset=utf-8\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"text/plain; charset=utf-8\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response time is less than 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Status code name has Forbidden\", function () {\r",
+									"    pm.response.to.have.status(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"uuid": "acdfd6db-851c-4294-a690-3b603c877a79"
+							},
+							{
+								"key": "Cookie",
+								"value": "token=1233",
+								"uuid": "b271ac4f-2319-4905-b7a3-3569bd807c10"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"Tester\",\r\n    \"lastname\" : \"123\",\r\n    \"totalprice\" : 101,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restful-booker.herokuapp.com/booking/{{booking_id}}",
+							"protocol": "https",
+							"host": [
+								"restful-booker",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"booking",
+								"{{booking_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBookingWithInvalidBlanktoken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Validate Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Content-Type value is text/plain; charset=utf-8\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"text/plain; charset=utf-8\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response time is less than 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Status code name has Forbidden\", function () {\r",
+									"    pm.response.to.have.status(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"uuid": "a2d6fa16-eedc-4854-a94c-4cf80d1d7514"
+							},
+							{
+								"key": "Cookie",
+								"value": "token=",
+								"uuid": "9496c4d4-c634-4bad-bf61-4d3b9be43491"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"Tester\",\r\n    \"lastname\" : \"123\",\r\n    \"totalprice\" : 101,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restful-booker.herokuapp.com/booking/{{booking_id}}",
+							"protocol": "https",
+							"host": [
+								"restful-booker",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"booking",
+								"{{booking_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBookingWithInvalidToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Validate Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Content-Type value is text/plain; charset=utf-8\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"text/plain; charset=utf-8\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response time is less than 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Status code name has Forbidden\", function () {\r",
+									"    pm.response.to.have.status(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"uuid": "03ee7b9f-8b93-4538-b525-d9939a2ae812"
+							},
+							{
+								"key": "Cookie",
+								"value": "token=12345",
+								"uuid": "e802e98b-c609-48ba-87f0-71f568d9285e"
+							}
+						],
+						"url": {
+							"raw": "https://restful-booker.herokuapp.com/booking/{{booking_id}}",
+							"protocol": "https",
+							"host": [
+								"restful-booker",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"booking",
+								"{{booking_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBookingWithInvalidBlankToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Validate Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Content-Type value is text/plain; charset=utf-8\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"text/plain; charset=utf-8\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response time is less than 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Status code name has Forbidden\", function () {\r",
+									"    pm.response.to.have.status(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"uuid": "a4324440-19a9-4189-9bc3-290f47edb6d5"
+							},
+							{
+								"key": "Cookie",
+								"value": "token=",
+								"uuid": "21811801-1f74-4b55-b89d-4dbb513cd395"
+							}
+						],
+						"url": {
+							"raw": "https://restful-booker.herokuapp.com/booking/{{booking_id}}",
+							"protocol": "https",
+							"host": [
+								"restful-booker",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"booking",
+								"{{booking_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBookingWithInvalidSpecialChaToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Validate Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Content-Type value is text/plain; charset=utf-8\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"text/plain; charset=utf-8\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate response time is less than 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Status code name has Forbidden\", function () {\r",
+									"    pm.response.to.have.status(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"uuid": "35235784-1182-41c9-bb30-528d18214c60"
+							},
+							{
+								"key": "Cookie",
+								"value": "token=!@!#@$!#",
+								"uuid": "6de4dec8-9863-45ee-a202-193a9d03593d"
+							}
+						],
+						"url": {
+							"raw": "https://restful-booker.herokuapp.com/booking/{{booking_id}}",
+							"protocol": "https",
+							"host": [
+								"restful-booker",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"booking",
+								"{{booking_id}}"
+							]
 						}
 					},
 					"response": []
